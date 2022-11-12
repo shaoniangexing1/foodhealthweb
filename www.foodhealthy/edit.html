@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="image/ico.ico" type="images/x-ico" />
+    <title>AAA健康饮食&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <script src="javascript/heath.js"></script>
+    <link rel="stylesheet" href="css/heath.css">
+    <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+<!--头部导航-->
+<div id="contianer">
+    <div id="nav">
+        <ul id="topNav"><!--顶部导航-->
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="index.html">返回首页</a></li>
+            <img src="image/topLogoRightText.png" id="topleftimg">
+            <img src="image/topLogoRight.png" id="toprightimg">
+        </ul>
+        <div id="imgnav">
+            <img src="image/logo.png" >
+        </div>
+        <ul id="mainNav"><!--主导航栏-->
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">菜谱</a></li>
+            <li><a href="heath.php">饮食健康</a></li>
+            <li><a href="#">运动</a></li>
+            <li><a href="#">养生菜谱</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<!--主要内容-->
+<div class="content">
+    <div class="add-health">
+        <h3>修改健康饮食</h3>
+        <?php foreach($arr as $val):?>
+        <form action="update.php?id=<?=$val['id']?>" method="post">
+            <div class="form-group">
+                <label >健康饮食标话题<br></label>
+                <input type="text" class="form-control" id='health_title' name="title" value="<?=$val['title']?>">
+            </div>
+            <div class="form-group">
+                <label >作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者<br></label>
+                <input type="text" class="form-control" id='health_author' name="name" value="<?=$val['name']?>">
+            </div>
+            <div class="form-group">
+                <label >健康饮食内容<br></label>
+                <textarea class="form-control" rows="12" name="content" id="health_content"><?=$val['content'];?></textarea>
+            </div>
+
+            <button class=" btn-block">确认修改</button>
+        </form>
+        <?php endforeach; ?>
+    </div>
+</div>
+<!--页脚底部-->
+<div id="footer">
+    <ul id="footerNav"><!--低部团队介绍-->
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">网站合作</a></li>
+        <li><a href="index.html">返回首页</a></li>
+    </ul>
+</div>
+</body>
+</html>

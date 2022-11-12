@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family:"Microsoft YaHei", "微软雅黑", "consolas";
+    font-size: 50px;
+}
+title{
+    text-align: center;
+}
+a {
+    width: 90px;
+    height: 60px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    line-height: 60px;
+    font-size:16px;
+}
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+/*顶部样式设置开始*/
+#contianer {/*导航栏整体设置*/
+    width: 100%;
+    height: 340px;
+    position: static;
+    top: 0;
+}
+#contianer a{
+    color: #4c443c;
+    font-weight: bold;
+}
+#contianer ul{/*整体列表设计*/
+    width: 100%;
+    list-style-type:none;
+}
+#contianer  li{/*头部列表子对象整体设置*/
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+}
+#topNav{
+    width: 100%;
+    height: 60px;
+    background-color:#F6F6F9;
+}
+#topNav li{/*顶部副导航栏设置*/
+    height: auto;
+    position: relative;
+    top: -77px;
+    right: -48%;
+}
+#topleftimg{
+    height: 110px;
+    width: 256px;
+    position: relative;
+    left: 47%;
+    top: -26px;
+}
+#toprightimg{
+    width:215px;
+    height: 60px;
+    position: relative;
+    left: 40%;
+    top:-50px;
+}
+#mainNav{
+    height: 60px;
+    position: relative;
+    top:-18px;
+    border-top: 2px dashed #a6ff37;
+    border-bottom: 2px dashed #a6ff37;
+}
+#mainNav li{/*顶部主导航栏设置*/
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    top:-18px;
+}
+#imgnav img{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: 9px;
+    left: 13px;
+}
+
+/*内容样式设置*/
+#content{
+    width: 1450px;
+    height: 1200px;
+    /*background-color: #53a1c7;*/
+    position:sticky;
+    left: 2.5%;
+}
+#conleft{
+    width: 45%;
+    height: 600px;
+    margin: 0;
+    background-color: #3a87ad;
+    position: relative;
+    left: 3.3%;
+    top: 3.3%;
+}
+#conright{
+    width: 45%;
+    height: 600px;
+    /*background-color: #d75c5c;*/
+    position: relative;
+    right: -51.7%;
+    top: -46.7%;
+}
+#conrightimg>img{
+    position: relative;
+    z-index:-1;
+    margin-top: 10px;
+    width:100%;
+    height: 300px;
+    box-shadow: -12px 4px 27px 8px #8b9fb7;
+    border-radius: 5px;
+}
+#imgxi{
+    position: absolute;
+    left: 15%;
+    top: 36%;
+}
+#imgxi>.imgxia{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 100%;
+    background-color: #01f129;
+}
+#conbottom{
+    width: 85%;
+    height: 500px;
+    background-color: #27b649;
+    position: relative;
+    left: 7.5%;
+    top:-44% ;
+}
+
+#conrighttext{
+    text-align: center;
+    line-height: 95px;
+    font-family: "楷体";
+    font-size: 60px;
+    color:#fefefe;
+    text-shadow:0px 1px 0px #c0c0c0,
+    0px 2px 0px #b0b0b0,
+    0px 3px 0px #a0a0a0,
+    0px 4px 0px #909090,
+    0px 5px 10px rgba(0, 0, 0, .9);
+}
+/*底部样式设置开始*/
+#footer{
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    background-color: #eee;
+}
+#footer ul{/*整体列表设计*/
+    width: 100%;
+    list-style-type:none;
+    border: 0;
+    position: relative;
+    top: -22%;
+}
+#footer  li{/*底部导航栏设置*/
+    width: 80px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 35%;
+}
+#footer a{
+    line-height: 60px;
+    border-bottom: 20px;
+}

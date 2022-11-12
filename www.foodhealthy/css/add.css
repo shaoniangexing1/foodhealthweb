@@ -1,0 +1,37 @@
+.content{
+    height: 662px;
+}
+.add-health{
+    width:950px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    padding: 30px 20px;
+    min-height: 500px;
+    box-shadow: 1px 1px 5px 3px rgb(0 0 0 / 30%);
+}
+.add-health h3{
+    text-align: center;
+}
+.add-health label{
+    font-size: 20px;
+    margin-left: 50px;
+}
+.form-control{
+    width: 900px;
+    height: 30px;
+    margin-left: 50px;
+}
+#health_content{
+    height: 250px;
+}
+.btn-block{
+   width: 900px;
+    height: 30px;
+    font-weight: bold;
+    margin-left: 50px;
+    background-color: #01f129;
+    border: 0;
+    box-shadow: 2px 2px 5px 2px #35bf4e;
+
+}

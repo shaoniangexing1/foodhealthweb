@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="image/ico.ico" type="images/x-ico" />
+    <title>AAA健康饮食&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <script src="javascript/heath.js"></script>
+    <link rel="stylesheet" href="css/heath.css">
+</head>
+<body>
+<!--头部导航-->
+<div id="contianer">
+    <div id="nav">
+        <ul id="topNav"><!--顶部导航-->
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="index.html">返回首页</a></li>
+            <img src="image/topLogoRightText.png" id="topleftimg">
+            <img src="image/topLogoRight.png" id="toprightimg">
+        </ul>
+        <div id="imgnav">
+            <img src="image/logo.png" >
+        </div>
+        <ul id="mainNav"><!--主导航栏-->
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">菜谱</a></li>
+            <li><a href="heath.php">饮食健康</a></li>
+            <li><a href="#">运动</a></li>
+            <li><a href="#">养生菜谱</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<!--主要内容-->
+<div class="content">
+    <h2>健康饮食</h2>
+    <!-- 健康饮食列表开始 -->
+    <div class="health-list">
+        <!-- 健康饮食列表左边开始 -->
+        <div class="health-list-left">
+            <!-- 健康饮食项开始 -->
+            <div class="health-add">
+                <a href="add.html">添加我的健康饮食推荐</a>
+            </div>
+            <?php foreach($datarr as $val){  ?>
+            <div class="health-list-item">
+                <div class="author-time">
+                    <span><?=$val['name']?></span> 发表于 <?=date('Y-m-d h:i:s',$val['publish'])?>
+                </div>
+                <!-- 方法详情 -->
+                <div class="health-des">
+                    <!-- 饮食问题标题 -->
+                    <h3 class="health-title" style='float: left;'>
+                        <i></i><a href="detail.php?id=<?=$val['id']?>"><?=$val['title']?></a>
+                    </h3>
+                    <div class="operate"><a href="edit.php?id=<?=$val['id'];?>">编辑</a>&nbsp;&nbsp;
+                        <a href="delete.php?id=<?=$val['id'];?>" onclick="returnconfirm('你确定要删除吗？删除后将无法恢复？');">删除</a></div>
+                    <div style='clear:both'></div>
+                    <div class="health-content-des ellipsis"><p><?=$val['content']?></p></div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+
+        <div style='clear:both;'></div>
+        <div class="page"><?=$pageinfo;?></div>
+</div>
+</div>
+<!--页脚底部-->
+<div id="footer">
+    <ul id="footerNav"><!--低部团队介绍-->
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">网站合作</a></li>
+        <li><a href="index.html">返回首页</a></li>
+    </ul>
+</div>
+</body>
+</html>
